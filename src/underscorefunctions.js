@@ -3,9 +3,9 @@
 import { isEqual, propertyOf, isUndefined } from "underscore";
 
 const mergeUnequalObject = ( object1, object2 ) => {
-    let newObject;
+    let newObject = {};
     if ( !isEqual( object1, object2 ) ) {
-        newObject = Object.assign( object1, object2 );
+        newObject = Object.assign( newObject, object1, object2 );
     }
     return newObject;
 };

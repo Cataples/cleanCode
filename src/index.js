@@ -1,11 +1,10 @@
 import { arrayAction, returnHigher, returnMax, sortArray, sumArray, displayIndexValuePair, returnSquare } from "./app";
 import { mergeUnequalObject, addPropertyIfMissing } from "./underscorefunctions";
 
-const arr = [ 10, 8, 20, 33 ];
+const arr = [ 1, 2, 2, 4, 4, 11, 22, 3, 44, 10, 34, 3, 14 ];
 const car = {
     wheels: 4,
-    color: "red",
-    testProp: undefined
+    color: "red"
 };
 
 const dacia = {
@@ -13,13 +12,13 @@ const dacia = {
     country: undefined
 };
 
-arrayAction( returnHigher, arr, 10 );
-arrayAction( returnMax, arr );
-arrayAction( sortArray, arr );
-arrayAction( sumArray, arr );
-arrayAction( displayIndexValuePair, arr );
-arrayAction( returnSquare, arr );
+console.log( arrayAction( returnHigher, arr, 34 ) );
+console.log( arrayAction( returnMax, arr ) );
+console.log( arrayAction( sortArray, arr ) );
+console.log( arrayAction( sumArray, arr ) );
+console.log( arrayAction( displayIndexValuePair, arr ) );
+console.log( arrayAction( returnSquare, arr ) );
 
 console.log( mergeUnequalObject( car, dacia ) );
-console.log( addPropertyIfMissing( dacia, "country", "cata" ) );
+console.log( addPropertyIfMissing( dacia, "country", "ro" ) );
 console.log( addPropertyIfMissing( car, "testProp", "catalin" ) );

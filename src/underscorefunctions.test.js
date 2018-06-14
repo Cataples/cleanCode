@@ -1,4 +1,4 @@
-import { mergeUnequalObject, addPropertyIfMissing } from "./underscorefunctions";
+import { mergeUnequalObject, addPropertyIfMissing, cloneObjectWithNewProperty } from "./underscorefunctions";
 
 const car = {
     wheels: 4,
@@ -31,5 +31,13 @@ test( "add property if it's undefined", () => {
     expect( addPropertyIfMissing( dacia, "country", "Romania" ) ).toEqual( {
         seats: 6,
         country: "Romania"
+    } );
+} );
+
+test( "create a new object with a new property", () => {
+    expect( cloneObjectWithNewProperty( dacia, "frane", "slabe tare" ) ).toEqual( {
+        seats: 6,
+        country: "Romania",
+        frane: "slabe tare"
     } );
 } );

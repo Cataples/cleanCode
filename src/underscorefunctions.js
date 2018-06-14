@@ -1,6 +1,6 @@
 /* eslint no-param-reassign: "error" */
 
-import { isEqual, propertyOf, isUndefined } from "underscore";
+import { isEqual, propertyOf, isUndefined, clone, has } from "underscore";
 
 const mergeUnequalObject = ( object1, object2 ) => {
     let newObject = {};
@@ -19,4 +19,13 @@ const addPropertyIfMissing = ( RefferenceObject, property, value ) => {
     return RefferenceObject;
 };
 
-export { mergeUnequalObject, addPropertyIfMissing };
+const cloneObjectWithNewProperty = ( RefferenceObject, property, value ) => {
+    if ( !has( RefferenceObject, property ) ) {
+        let newObject = clone( RefferenceObject );
+        newObject[ property ] = value;
+        return newObject;
+    }
+    return "Obiectul are deja proprietatea mentionata";
+};
+
+export { mergeUnequalObject, addPropertyIfMissing, cloneObjectWithNewProperty };

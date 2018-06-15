@@ -22,6 +22,6 @@ test( "test failed intentionat", () => {
     expect( arrayAction( displayIndexValuePair, arr ) ).toEqual( "test" );
 } );
 
-test( "test squared numbers inside array, test will fail due to previous actions on array", () => {
+test( "test squared numbers inside array, test will fail due to previous actions on the array", () => {
     expect( arrayAction( returnSquare, arr ) ).toEqual( [ 1, 4, 4, 16, 16, 121, 484, 9, 1936, 100, 1156, 9, 196 ] );
 } );

@@ -10,7 +10,7 @@ const displayIndexValuePair = array => array.map( ( element, index ) => ( `index
 
 const returnSquare = array => array.map( ( element ) => element * element );
 
-const ArrayIsNumeric = array => {
+const arrayIsNumeric = array => {
     let validationBool;
     array.forEach( element => {
         if ( typeof ( element ) !== "number" ) {
@@ -21,8 +21,8 @@ const ArrayIsNumeric = array => {
 };
 
 const arrayAction = ( action, array, refferencePoint ) => {
-    let ArrayNumericBol = ArrayIsNumeric( array );
-    if ( ArrayNumericBol !== false ) {
+    let arrayNumericBol = arrayIsNumeric( array );
+    if ( arrayNumericBol !== false ) {
         return action( array, refferencePoint );
     }
     return "Array-ul introdus trebuie sa fie numeric";

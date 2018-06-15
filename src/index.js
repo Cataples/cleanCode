@@ -1,7 +1,7 @@
 import { arrayAction, returnHigher, returnMax, sortArray, sumArray, displayIndexValuePair, returnSquare } from "./app";
 import { mergeUnequalObject, addPropertyIfMissing, cloneObjectWithNewProperty } from "./underscorefunctions";
 
-const arr = [ 1, 2, 2, 4, 4, 11, 22, 3, 44, 10, 34, 3, 14 ];
+const arr = [ "a" ];
 const car = {
     wheels: 4,
     color: "red"
